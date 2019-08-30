@@ -1,7 +1,13 @@
 <template>
+<div>
+<div class="header">
+      <p class="header__title">Pet Retriever</p>
+    </div>
   <div id="app">
+    
     <router-view/>
-  </div>
+</div>
+</div>
 </template>
 
 <style lang="scss">
@@ -11,17 +17,17 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: #FAFAFA;
-  height: 100%;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+.header{
+  background-color: #041436;
+  position: fixed;
+  height: 30px;
+  width: 100%;
+  top: 0;
+  &__title{
+    padding-top: 5px;
+    color: #FAFAFA;
+    font-size: 1.5rem;
   }
 }
 </style>

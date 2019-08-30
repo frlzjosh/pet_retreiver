@@ -1,5 +1,5 @@
 <template>
-<div class="login">
+<div class="login container">
     <h1>Login</h1>
     <form class="login__form" action="login">
         <input type="username" placeholder="Username">
