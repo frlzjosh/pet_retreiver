@@ -6,7 +6,7 @@
 
             </div>
             <div class="col-4 toolbar__item">
-                <p class="toolbar__title">DM</p>
+                <router-link to="/message"><p class="toolbar__title">DM</p></router-link>
 
             </div>
             <div class="col-4 toolbar__item">
