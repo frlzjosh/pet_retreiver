@@ -2,20 +2,22 @@
     <div class="toolbar container">
         <div class="row">
             <div class="col-4 toolbar__item">
-                <p class="toolbar__title">PETS</p>
+                <router-link to="/pets"><p class="toolbar__title">PETS</p></router-link>
+                <font-awesome-icon icon="dog" size="lg"/>
 
             </div>
             <div class="col-4 toolbar__item">
-                <router-link to="/message"><p class="toolbar__title">DM</p></router-link>
+                <router-link to="/messages"><p class="toolbar__title">DM</p></router-link>
+                <font-awesome-icon icon="envelope" size="lg"/>
 
             </div>
             <div class="col-4 toolbar__item">
-                <p class="toolbar__title">PROFILE</p>
-                
+                <router-link to="/profile"><p class="toolbar__title">PROFILE</p></router-link>
+                <font-awesome-icon icon="user-circle" size="lg"/>
             </div>
         </div>
     </div>
-</template>
+</template> 
 <script>
 export default {
     name: 'Toolbar',

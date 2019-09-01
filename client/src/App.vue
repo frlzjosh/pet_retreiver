@@ -21,11 +21,12 @@
 .header{
   background-color: #041436;
   position: fixed;
-  height: 30px;
+  height: 40px;
   width: 100%;
   top: 0;
   &__title{
-    padding-top: 5px;
+    padding-top: 9px;
+    padding-left: 10px;
     color: #FAFAFA;
     font-size: 1.5rem;
   }

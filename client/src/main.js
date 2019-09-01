@@ -7,6 +7,16 @@ import * as VueGoogleMaps from 'vue2-google-maps'
 import { MdButton, MdContent, MdTabs } from 'vue-material/dist/components'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret, faEnvelope, faDog, faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faUserSecret)
+library.add(faEnvelope)
+library.add(faDog)
+library.add(faUserCircle)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
 
 Vue.use(MdButton)
 Vue.use(MdContent)
