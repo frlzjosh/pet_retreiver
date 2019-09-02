@@ -2,7 +2,7 @@
     <div class="profile container">
         <div class="row">
             <div class="col-12">
-                <router-link to="/hub"><p>Go Back</p></router-link>
+                <router-link to="/hub"><p>Go Back To Hub</p></router-link>
                 <photos :isForMessage="false" :photo="img_url"></photos>
             </div>
         </div>

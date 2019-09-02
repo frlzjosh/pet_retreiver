@@ -6,8 +6,8 @@
         <input type="password" placeholder="Password">
     </form>
     <router-link to="/hub"><md-button class="md-raised md-primary">Login</md-button></router-link>
-    <div class="md-layout-item login__options">
-        <h3>Create Account</h3>
+    <div class="md-layout-item login__options mt-3">
+        <router-link to="/createAccount"><h3>Create Account</h3></router-link>
         <h3>Forgot Password</h3>
     </div>
 </div>    
@@ -28,7 +28,8 @@ export default {
 <style lang="scss">
     .login{
         transform: scale(1.4);
-        margin-top: 13.5rem;
+        padding-top: 10rem;
+        margin-top: 1.5rem;
         &__form{
             margin-top: 2.25rem;
             margin-bottom: 1rem;

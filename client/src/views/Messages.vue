@@ -1,6 +1,6 @@
 <template>
     <div class="messages container">
-        <router-link to="/hub"><p>Go Back</p></router-link>
+        <router-link to="/hub"><p>Go Back To Hub</p></router-link>
         <h1>Messages</h1>
         <message-list></message-list>
         <message-list></message-list>

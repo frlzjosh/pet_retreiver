@@ -1,5 +1,6 @@
 <template>
     <div class="hub container">
+        <router-link to="/"><p>Logout</p></router-link>
         <div class="row">
             <div class="col-12">
                 <GmapMap
@@ -35,7 +36,8 @@ export default {
 
 <style lang="scss">
     .hub{
-        margin-top: 5rem;
+        padding-top: 3.25rem;
+        margin-top: 1.5rem;
         position: relative;
     }
 
