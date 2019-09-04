@@ -2,6 +2,12 @@
     <div class="hub container">
         <router-link to="/"><p>Logout</p></router-link>
         <div class="row">
+            <div class="col-12 hub__header">
+                <h2>Hello {{getUserInfo.name}}!</h2>
+                <p>Don't worry, {{getUserInfo.pet_name}} will be found.</p>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-12">
                 <GmapMap
                 class="text-center"
@@ -26,6 +32,7 @@
 </template>
 <script>
 import toolbar from './../components/Toolbar'
+import { mapGetters} from 'vuex'
 export default {
     name: 'Hub',
     components: {
@@ -33,6 +40,7 @@ export default {
     },
     data(){
         return{
+            name: null,
             markers: [
                 {
                     position: {
@@ -68,6 +76,13 @@ export default {
             ]
         }
     },
+    computed: {
+        ...mapGetters(
+            [
+                'getUserInfo'
+            ]
+        )
+    },
     methods:{
 
     }
@@ -78,7 +93,7 @@ export default {
     .hub{
         padding-top: 3.25rem;
         margin-top: 1.5rem;
-        position: relative;
+        position: relative; 
     }
 
 </style>
