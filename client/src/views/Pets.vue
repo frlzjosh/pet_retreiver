@@ -1,16 +1,21 @@
+
+
 <template>
     <div class="pets container">
-        <h3>Pets</h3>
-        <pet-list :pets="petsInfo"></pet-list>
+        <router-link to="/hub"><p>Go Back</p></router-link>
+        <p>Pets Nearby</p>
+            <li class="petProfileList">
+                <pet-list></pet-list>
+                <pet-list></pet-list>
+                <pet-list></pet-list>
+            </li>
     </div>
 </template>
 <script>
 import PetList from './../components/PetList'
-import MessageList from './../components/MessageList'
 export default {
     name:'Pets',
-    components: {
-        MessageList,
+    components:{
         PetList
     },
     data(){
@@ -46,5 +51,14 @@ export default {
     .pets{
         z-index: 0;
         margin-top: 2rem;
+        padding-top: 1rem;
+    }
+    .petProfileList{
+        // height: 20px;
+    }
+    li{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
 </style>

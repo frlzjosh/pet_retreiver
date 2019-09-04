@@ -18,21 +18,27 @@
                 </div>
             </div>
         </div>
+        <div class="row mt-5">
+            <pet-list></pet-list>
+        </div>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import Photos from './../components/Photos'
+import MessageList from './../components/MessageList'
 export default {
     name:'Profile',
     components: {
-        Photos
+        Photos,
+        MessageList
     },
     data(){
         return{
             img_url: "https://avatars0.githubusercontent.com/u/26909882?s=460&amp;v=4",
-            name: "Josh"
+            name: "Josh",
+            test: null
         }
     },
     computed: {
