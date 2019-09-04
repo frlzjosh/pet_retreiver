@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <div class="row pet-block">
         <div class="col-4">
             <router-link to="/petProfile">
                 <div class="pet-list">
@@ -65,12 +65,6 @@ export default {
     .petName{
         font-weight: bold;
     }
-    .row{
-                width: 100%;
-        border: 1px solid black;
-        border-radius: 5px;
-        margin: 2px;
-    }
     p{
         margin:0;
     }
@@ -86,6 +80,11 @@ export default {
         font-weight: bold;
         border: 1px solid red;
         border-radius: 5px;
+    }
+    .pet-block{
+        border: 1px solid black;
+        margin-bottom: 1rem;
+        padding: 7px;
     }
 
 </style>

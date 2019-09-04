@@ -8,12 +8,12 @@
         </div>
         <div class="row mt-3">
             <div class="col-12">
-                <h3>{{name}}</h3>
+                <h3>{{getUserInfo.name}}</h3>
                 <div class="profile__pet-info">
                     <ul class="profile__pet-list">
-                        <li class="profile__info profile__info--top">Pet Name: Thomas</li>
-                        <li class="profile__info">Pet Type: Dinosaur</li>
-                        <li class="profile__info">Lives In: Canoga Park, CA</li>
+                        <li class="profile__info profile__info--top">Pet Name: {{getUserInfo.pet_name}}</li>
+                        <li class="profile__info">Pet Type: {{getUserInfo.pet_type}}</li>
+                        <li class="profile__info">Lives In: {{getUserInfo.city}}, CA</li>
                     </ul>
                 </div>
             </div>
@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Photos from './../components/Photos'
 import MessageList from './../components/MessageList'
 export default {
@@ -39,6 +40,13 @@ export default {
             name: "Josh",
             test: null
         }
+    },
+    computed: {
+        ...mapGetters(
+            [
+                'getUserInfo'
+            ]
+        )
     },
     methods: {
 

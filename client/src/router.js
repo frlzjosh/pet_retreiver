@@ -6,9 +6,9 @@ import PersonalMessage from './views/PersonalMessage'
 import Messages from './views/Messages'
 import Pets from './views/Pets'
 import Profile from './views/Profile'
+import PetProfile from './views/PetProfile'
 import AccountCreation from './views/AccountCreation'
 import AccountForm from './views/AccountForm'
-import PetProfile from './views/PetProfile'
 
 Vue.use(Router)
 
