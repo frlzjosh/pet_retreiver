@@ -19,6 +19,7 @@
   color: #2c3e50;
 }
 .header{
+  z-index: 1;
   background-color: #041436;
   position: fixed;
   height: 40px;

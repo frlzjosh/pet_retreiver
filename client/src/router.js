@@ -6,6 +6,9 @@ import PersonalMessage from './views/PersonalMessage'
 import Messages from './views/Messages'
 import Pets from './views/Pets'
 import Profile from './views/Profile'
+import PetProfile from './views/PetProfile'
+import AccountCreation from './views/AccountCreation'
+import AccountForm from './views/AccountForm'
 
 Vue.use(Router)
 
@@ -18,6 +21,9 @@ export default new Router({
     {path: '/personalMessage', component: PersonalMessage},
     {path: '/messages', component: Messages},
     {path: '/profile', component: Profile},
-    {path: '/pets', component: Pets}
+    {path: '/pets', component: Pets},
+    {path: '/createAccount', component: AccountCreation},
+    {path: '/accountForm', component: AccountForm},
+    {path: '/petProfile', component: PetProfile}
   ]
 })
