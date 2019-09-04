@@ -2,18 +2,21 @@
     <div class="profile container">
         <div class="row">
             <div class="col-12">
-                <router-link to="/hub"><p>Go Back To Hub</p></router-link>
-                <photos :isForMessage="false" :photo="img_url"></photos>
+                <router-link to="/pets"><p>Go Back To Nearby Pets</p></router-link>
+                <!-- <photos :isForMessage="false" :photo="img_url"></photos> -->
+                <photos :photo="img_doggo"></photos>
+
             </div>
         </div>
         <div class="row mt-3">
             <div class="col-12">
-                <h3>{{name}}</h3>
+                <h3>{{petName}}</h3>
                 <div class="profile__pet-info">
                     <ul class="profile__pet-list">
-                        <li class="profile__info profile__info--top">Pet Name: Thomas</li>
-                        <li class="profile__info">Pet Type: Dinosaur</li>
+                        <!-- <li class="profile__info profile__info--top">Pet Name: Thomas</li> -->
+                        <li class="pet__info">Pet Type: {{petType}}</li>
                         <li class="profile__info">Lives In: Canoga Park, CA</li>
+                        <li class="profile__info">Owner:{{name}}</li>
                     </ul>
                 </div>
             </div>
@@ -28,15 +31,18 @@
 import Photos from './../components/Photos'
 import MessageList from './../components/MessageList'
 export default {
-    name:'Profile',
+    name:'PetProfile',
     components: {
         Photos,
         MessageList
     },
     data(){
         return{
-            img_url: "https://avatars0.githubusercontent.com/u/26909882?s=460&amp;v=4",
+            // img_url: "https://avatars0.githubusercontent.com/u/26909882?s=460&amp;v=4",
+            img_doggo: 'https://c.pxhere.com/photos/3c/47/dog_sweet_golden_puppy_pet_animal_friend_nature-597156.jpg!d',
             name: "Josh",
+            petName: "Thomas",
+            petType: "Dog",
             test: null
         }
     },
@@ -62,10 +68,22 @@ export default {
             border-radius: 7.5px;
             text-align: left;
             font-size: 1.25rem;
+            button{
+                text-align: center;
+            }
         }
         &__pet-list{
             list-style: none;
             text-decoration: none;
         }
+    }
+    .pet{
+        &__info{
+            text-align: center;
+            padding-top:10px;
+        }
+    }
+    button{
+        text-align: center;
     }
 </style>

@@ -8,6 +8,7 @@ import Pets from './views/Pets'
 import Profile from './views/Profile'
 import AccountCreation from './views/AccountCreation'
 import AccountForm from './views/AccountForm'
+import PetProfile from './views/PetProfile'
 
 Vue.use(Router)
 
@@ -22,6 +23,7 @@ export default new Router({
     {path: '/profile', component: Profile},
     {path: '/pets', component: Pets},
     {path: '/createAccount', component: AccountCreation},
-    {path: '/accountForm', component: AccountForm}
+    {path: '/accountForm', component: AccountForm},
+    {path: '/petProfile',component: PetProfile}
   ]
 })
