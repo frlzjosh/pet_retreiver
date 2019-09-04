@@ -2,7 +2,8 @@
     <div class="toolbar container">
         <div class="row">
             <div class="col-4 toolbar__item">
-                <router-link to="/pets"><p class="toolbar__title">PETS</p></router-link>
+                <p @click="showPets=true" class="toolbar__title">PETS</p>
+                <p v-show="showPets==true" @click="showPets=false">Hide Pets</p>
                 <font-awesome-icon icon="dog" size="lg"/>
 
             </div>
@@ -16,14 +17,21 @@
                 <font-awesome-icon icon="user-circle" size="lg"/>
             </div>
         </div>
+        <div v-if="showPets=== true" class="row">
+            <pets/>
+        </div>
     </div>
 </template> 
 <script>
+import Pets from './../views/Pets'
 export default {
     name: 'Toolbar',
+    components:{
+        Pets
+    },
     data(){
         return{
-
+            showPets: false
         }
     },
     methods: {
