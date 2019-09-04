@@ -10,6 +10,14 @@
                     map-type-id="terrain"
                     style="width: 100%; height: 600px;"
                 >
+                <GmapMarker
+                    :key="index"
+                    v-for="(m, index) in markers"
+                    :position="m.position"
+                    :clickable="true"
+                    :draggable="true"
+                    @click="center=m.position"
+                />
                 </GmapMap>
             </div>
         </div>
@@ -25,7 +33,39 @@ export default {
     },
     data(){
         return{
+            markers: [
+                {
+                    position: {
+                        lat:34.238154, lng:-118.529460
+                        }
+                },
+                {
+                    position: {
+                        lat:34.2460743, lng:-118.5370213
+                        }
+                },
+                {
+                    position: {
+                        lat:34.2433018, lng:-118.5155767
+                    },
 
+                },
+                {
+                    position: {
+                        lat:34.2401014, lng:-118.5428577
+                    }
+                },
+                {
+                    position: {
+                        lat:34.2408014, lng:-118.5428677
+                    }
+                },
+                {
+                    position: {
+                        lat:34.2402214, lng:-118.5428627
+                    }
+                }
+            ]
         }
     },
     methods:{

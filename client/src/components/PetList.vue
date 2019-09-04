@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col-12">
-            <router-link to="/personalMessage">
+            <router-link to="/petProfile">
                 <div v-for="(element, index) in pets" :key="index" class="pet-list">
                     <img class="pet-list__photo" :src="element.img" alt="photo" >
                         <h3>Name: {{element.name}}</h3>
