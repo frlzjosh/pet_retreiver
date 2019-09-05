@@ -5,6 +5,9 @@
             <div class="col-12 hub__header">
                 <h2>Hello {{getUserInfo.name}}!</h2>
                 <p>Don't worry, {{getUserInfo.pet_name}} will be found.</p>
+                <div id="reportFound">
+                    <router-link to="/petForm" foundForm=true><p>Report a pet</p></router-link>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -33,14 +36,17 @@
 <script>
 import toolbar from './../components/Toolbar'
 import { mapGetters} from 'vuex'
+import PetForm from './../views/PetForm'
 export default {
     name: 'Hub',
     components: {
-        toolbar
+        toolbar,
+        PetForm
     },
     data(){
         return{
             name: null,
+            reportBool: false,
             markers: [
                 {
                     position: {
@@ -84,7 +90,9 @@ export default {
         )
     },
     methods:{
-
+        DisplayReport() {
+            var reportButton = document.getElementById("")
+        }
     }
 }
 </script>
