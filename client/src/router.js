@@ -23,7 +23,6 @@ export default new Router({
     {path: '/profile', component: Profile},
     {path: '/pets', component: Pets},
     {path: '/createAccount', component: AccountCreation},
-    {path: '/accountForm', component: AccountForm},
-    {path: '/petProfile', component: PetProfile}
+    {path: '/petProfile',component: PetProfile}
   ]
 })

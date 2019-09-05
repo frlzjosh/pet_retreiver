@@ -3,36 +3,53 @@
         <div class="row">
             <div class="col-12">
                 <router-link to="/hub"><p>Go Back To Hub</p></router-link>
-                <photos :isForMessage="false" :photo="img_url"></photos>
+                <photos :isForPetProfile="true" :photo="img_url"></photos>
             </div>
         </div>
         <div class="row mt-3">
             <div class="col-12">
-                <h3>{{name}}</h3>
+                <h3>{{getUserInfo.name}}</h3>
                 <div class="profile__pet-info">
                     <ul class="profile__pet-list">
-                        <li class="profile__info profile__info--top">Pet Name: Thomas</li>
-                        <li class="profile__info">Pet Type: Dinosaur</li>
-                        <li class="profile__info">Lives In: Canoga Park, CA</li>
+                        <li class="profile__info profile__info--top">Pet Name: {{getUserInfo.pet_name}}</li>
+                        <li class="profile__info">Pet Type: {{getUserInfo.pet_type}}</li>
+                        <li class="profile__info">Lives In: {{getUserInfo.city}}, CA</li>
                     </ul>
                 </div>
             </div>
+        </div>
+        <div class="row mt-5">
+            <h3>{{getUserInfo.name}}'s history on Pet Retriever</h3>
+            <pet-list></pet-list>
         </div>
     </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Photos from './../components/Photos'
+import MessageList from './../components/MessageList'
+import PetList from './../components/PetList'
 export default {
     name:'Profile',
     components: {
-        Photos
+        Photos,
+        MessageList,
+        PetList
     },
     data(){
         return{
             img_url: "https://avatars0.githubusercontent.com/u/26909882?s=460&amp;v=4",
-            name: "Josh"
+            name: "Josh",
+            test: null
         }
+    },
+    computed: {
+        ...mapGetters(
+            [
+                'getUserInfo'
+            ]
+        )
     },
     methods: {
 

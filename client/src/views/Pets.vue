@@ -1,16 +1,19 @@
+
+
 <template>
-    <div class="pets container">
-        <h3>Pets</h3>
-        <pet-list :pets="petsInfo"></pet-list>
+    <div class="pets mt-5 pb-5 container">
+        <h3>Pets Nearby</h3>
+            <li class="petProfileList">
+                <pet-list></pet-list>
+            </li>
     </div>
 </template>
 <script>
+import {mapGetters } from 'vuex'
 import PetList from './../components/PetList'
-import MessageList from './../components/MessageList'
 export default {
     name:'Pets',
-    components: {
-        MessageList,
+    components:{
         PetList
     },
     data(){
@@ -36,6 +39,16 @@ export default {
                 
         }
     },
+    computed: {
+        ...mapGetters(
+            [
+                'getPetImages',
+                'getPetNames'
+            ]
+        )
+    },
+    mounted(){
+    },
     methods: {
 
     }
@@ -46,5 +59,14 @@ export default {
     .pets{
         z-index: 0;
         margin-top: 2rem;
+        padding-top: 1rem;
+    }
+    .petProfileList{
+        // height: 20px;
+    }
+    li{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
 </style>
