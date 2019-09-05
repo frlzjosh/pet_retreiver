@@ -26,16 +26,16 @@
 <script>
 import TextMessage from './../components/TextMessage'
 export default {
-    name: 'PersonalMessage',
-    components:{
-        TextMessage
-    },
-    data(){
-        return {}
-    },
-    methods: {
+  name: 'PersonalMessage',
+  components: {
+    TextMessage
+  },
+  data () {
+    return {}
+  },
+  methods: {
 
-    }
+  }
 }
 </script>
 

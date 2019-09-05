@@ -8,35 +8,35 @@
 <script>
 import MessageList from './../components/MessageList'
 export default {
-    name: 'Messages',
-    components: {
-        MessageList
-    },
-    data(){
-        return{
-            messageInfo: [
-                {
-                    img: 'https://avatars0.githubusercontent.com/u/26909882?s=460&amp;amp;v=4',
-                    name: 'Josh'
-                },
-                {
-                    img: 'https://thefader-res.cloudinary.com/private_images/w_1440,c_limit,f_auto,q_auto:best/IMG_3270_gj6q6c/lil-b-interview.jpg',
-                    name: 'Lil B'
-                },
-                {
-                    img: 'https://pbs.twimg.com/media/EAlLEfQU8AAxhc7.jpg',
-                    name: 'Yung Kamala Harris'
-                },
-                {
-                    img: 'https://akns-images.eonline.com/eol_images/Celebrities_Gallery/20061007/293.pitt.troy.100506.jpg',
-                    name: 'Da Pitt'
-                }
-            ]
+  name: 'Messages',
+  components: {
+    MessageList
+  },
+  data () {
+    return {
+      messageInfo: [
+        {
+          img: 'https://avatars0.githubusercontent.com/u/26909882?s=460&amp;amp;v=4',
+          name: 'Josh'
+        },
+        {
+          img: 'https://thefader-res.cloudinary.com/private_images/w_1440,c_limit,f_auto,q_auto:best/IMG_3270_gj6q6c/lil-b-interview.jpg',
+          name: 'Lil B'
+        },
+        {
+          img: 'https://pbs.twimg.com/media/EAlLEfQU8AAxhc7.jpg',
+          name: 'Yung Kamala Harris'
+        },
+        {
+          img: 'https://akns-images.eonline.com/eol_images/Celebrities_Gallery/20061007/293.pitt.troy.100506.jpg',
+          name: 'Da Pitt'
         }
-    },
-    methods: {
-
+      ]
     }
+  },
+  methods: {
+
+  }
 }
 </script>
 <style lang="scss">

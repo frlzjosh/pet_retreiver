@@ -4,7 +4,7 @@
       <p class="header__title">Pet Retriever</p>
     </div>
   <div id="app">
-    
+
     <router-view/>
 </div>
 </div>
@@ -13,7 +13,7 @@
 <script>
 import { mapActions } from 'vuex'
 export default {
-  created(){
+  created () {
     this.findPets()
   },
   methods: {
@@ -23,7 +23,7 @@ export default {
       ]
     )
   }
-} 
+}
 </script>
 
 <style lang="scss">

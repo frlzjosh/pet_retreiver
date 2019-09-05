@@ -28,32 +28,30 @@
 <script>
 import { mapGetters } from 'vuex'
 import Photos from './../components/Photos'
-import MessageList from './../components/MessageList'
 import PetList from './../components/PetList'
 export default {
-    name:'Profile',
-    components: {
-        Photos,
-        MessageList,
-        PetList
-    },
-    data(){
-        return{
-            img_url: "https://avatars0.githubusercontent.com/u/26909882?s=460&amp;v=4",
-            name: "Josh",
-            test: null
-        }
-    },
-    computed: {
-        ...mapGetters(
-            [
-                'getUserInfo'
-            ]
-        )
-    },
-    methods: {
+  name: 'Profile',
+  components: {
+    Photos,
+    PetList
+  },
+  data () {
+    return {
+      img_url: 'https://avatars0.githubusercontent.com/u/26909882?s=460&amp;v=4',
+      name: 'Josh',
+      test: null
+    }
+  },
+  computed: {
+    ...mapGetters(
+      [
+        'getUserInfo'
+      ]
+    )
+  },
+  methods: {
 
-    }   
+  }
 }
 </script>
 

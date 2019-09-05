@@ -4,31 +4,31 @@
             <img  class="photo-message" :src="photo" alt="profile image">
         </div>
         <div v-if="isForPetList" class="photo text-center">
-            <img :src="photo" class="photo-petList" alt="profile image">    
+            <img :src="photo" class="photo-petList" alt="profile image">
         </div>
         <div v-if="isForPetProfile" class="photo text-center mt-2">
             <img :src="photo" class="photo-petProfile" alt="">
         </div>
 
-    </div>   
+    </div>
 </template>
 <script>
 export default {
-    name:'Photos',
-    props: [
-        'photo',
-        'isForMessage',
-        'isForPetList',
-        'isForPetProfile'
-    ],
-    data(){
-        return{
-
-        }
-    },
-    methods: {
+  name: 'Photos',
+  props: [
+    'photo',
+    'isForMessage',
+    'isForPetList',
+    'isForPetProfile'
+  ],
+  data () {
+    return {
 
     }
+  },
+  methods: {
+
+  }
 }
 </script>
 <style lang="scss">
@@ -49,6 +49,5 @@ export default {
             border-radius: 4px;
         }
     }
-
 
 </style>

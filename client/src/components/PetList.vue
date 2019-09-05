@@ -11,14 +11,14 @@
             <div class="col-2 pt-5">
                 <p class="petStatus">{{status_array[index]}}</p>
             </div>
-            <div class="col-3 pt-4"> 
+            <div class="col-3 pt-4">
                 <span class="pet-info">
                     <p class="petName">Pet name: {{random_names[index]}}</p>
                     <p>Last Seen: {{locations[index]}} </p>
                     <p>Miles away: {{miles[index]}}</p>
                 </span>
             </div>
-            <div class="col-3"> 
+            <div class="col-3">
                 <span class="messageButton">
                     <router-link to="/petProfile">
                         <Button>View</Button>
@@ -29,40 +29,39 @@
     </div>
 </template>
 <script>
-import {mapGetters} from 'vuex'
+import { mapGetters } from 'vuex'
 import Photos from './../components/Photos'
 export default {
-    name: 'PetList',
-    components: {
-        Photos
-    },
-    data(){
-        return{
-            random_names: ['Mike', 'Alex','Dane'],
-            status_array: ['Lost', 'Lost', 'Found'],
-            locations: ['Winnetka, CA', 'Westwood, CA', 'North Hollywood, CA'],
-            miles: []
-        }
-
-    },
-    created(){
-        this.generateRandomMiles()
-    },
-    computed:{
-        ...mapGetters(
-            [
-                'getPetImages',
-                'getPetNames'
-            ]
-        )
-    },
-    methods: {
-        generateRandomMiles(){
-            for(var i =0; i < 3; i++){
-                this.miles.push(Math.floor(Math.random() * 10))
-            }
-        }
+  name: 'PetList',
+  components: {
+    Photos
+  },
+  data () {
+    return {
+      random_names: ['Mike', 'Alex', 'Dane'],
+      status_array: ['Lost', 'Lost', 'Found'],
+      locations: ['Winnetka, CA', 'Westwood, CA', 'North Hollywood, CA'],
+      miles: []
     }
+  },
+  created () {
+    this.generateRandomMiles()
+  },
+  computed: {
+    ...mapGetters(
+      [
+        'getPetImages',
+        'getPetNames'
+      ]
+    )
+  },
+  methods: {
+    generateRandomMiles () {
+      for (var i = 0; i < 3; i++) {
+        this.miles.push(Math.floor(Math.random() * 10))
+      }
+    }
+  }
 }
 </script>
 <style lang="scss">

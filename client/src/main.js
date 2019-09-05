@@ -18,25 +18,24 @@ library.add(faDog)
 library.add(faUserCircle)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
-
 Vue.use(MdButton)
 Vue.use(MdContent)
 Vue.use(MdTabs)
 Vue.use(axios)
 
-let api_key ='AIzaSyD75yziFepXfsT_zyNAuaAPSxUNVLlYK-w'
+let apiKey = 'AIzaSyD75yziFepXfsT_zyNAuaAPSxUNVLlYK-w'
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: api_key,
-    libraries: 'places', // This is required if you use the Autocomplete plugin
+    key: apiKey,
+    libraries: 'places' // This is required if you use the Autocomplete plugin
     // OR: libraries: 'places,drawing'
     // OR: libraries: 'places,drawing,visualization'
     // (as you require)
- 
-    //// If you want to set the version, you can do so:
+
+    /// / If you want to set the version, you can do so:
     // v: '3.26',
-  },
+  }
 })
 Vue.config.productionTip = false
 

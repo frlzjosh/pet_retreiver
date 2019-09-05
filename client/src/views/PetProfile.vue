@@ -24,29 +24,25 @@
 
 <script>
 import Photos from './../components/Photos'
-import MessageList from './../components/MessageList'
-import PetList from './../components/PetList'
 export default {
-    name:'PetProfile',
-    components: {
-        Photos,
-        MessageList,
-        PetList
-    },
-    data(){
-        return{
-            // img_url: "https://avatars0.githubusercontent.com/u/26909882?s=460&amp;v=4",
-            img_doggo: 'https://c.pxhere.com/photos/3c/47/dog_sweet_golden_puppy_pet_animal_friend_nature-597156.jpg!d',
-            name: "Josh",
-            petName: "Thomas",
-            petType: "Dog",
-            test: null,
-            status_array: ['lost', 'lost', 'found']
-        }
-    },
-    methods: {
+  name: 'PetProfile',
+  components: {
+    Photos
+  },
+  data () {
+    return {
+      // img_url: "https://avatars0.githubusercontent.com/u/26909882?s=460&amp;v=4",
+      img_doggo: 'https://c.pxhere.com/photos/3c/47/dog_sweet_golden_puppy_pet_animal_friend_nature-597156.jpg!d',
+      name: 'Josh',
+      petName: 'Thomas',
+      petType: 'Dog',
+      test: null,
+      status_array: ['lost', 'lost', 'found']
+    }
+  },
+  methods: {
 
-    }   
+  }
 }
 </script>
 

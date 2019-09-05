@@ -14,41 +14,36 @@
     </div>
 </template>
 <script>
-import Photos from './../components/Photos'
 export default {
-    name: 'MessageList',
-    components: {
-        Photos
-    },
-    props: [
-        'messages'
-    ],
-    data(){
-        return{
-            img_url: 'https://avatars0.githubusercontent.com/u/26909882?s=460&amp;v=4',
-            minutes: [],
-            hour: []
-        }
-
-    },
-    created(){
-        this.randomizeTime()
-    },
-    methods: {
-        randomizeTime(){
-            var i = 0
-            for( i = 0; i< 4; i++){
-                this.minutes.push(Math.floor(Math.random() * 60))
-                this.hour.push(Math.floor(Math.random() * 12))
-                if(this.hour[i] < 0){
-                    this.hour[i] = 1
-                }
-                if(this.minutes[i] < 10){
-                    this.minutes[i] = this.minutes[i] +9;
-                }
-            }
-        }
+  name: 'MessageList',
+  props: [
+    'messages'
+  ],
+  data () {
+    return {
+      img_url: 'https://avatars0.githubusercontent.com/u/26909882?s=460&amp;v=4',
+      minutes: [],
+      hour: []
     }
+  },
+  created () {
+    this.randomizeTime()
+  },
+  methods: {
+    randomizeTime () {
+      var i = 0
+      for (i = 0; i < 4; i++) {
+        this.minutes.push(Math.floor(Math.random() * 60))
+        this.hour.push(Math.floor(Math.random() * 12))
+        if (this.hour[i] < 0) {
+          this.hour[i] = 1
+        }
+        if (this.minutes[i] < 10) {
+          this.minutes[i] = this.minutes[i] + 9
+        }
+      }
+    }
+  }
 }
 </script>
 <style lang="scss">
@@ -62,9 +57,9 @@ export default {
             display: inline;
             width: 300px;
             height: 310px !important;
-            padding: 20px;  
+            padding: 20px;
         }
-    
+
         &__name{
             margin-top: 7rem;
             margin-left: 7rem;

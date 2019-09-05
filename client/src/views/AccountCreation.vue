@@ -11,7 +11,7 @@
             </div>
             <div v-show="showForm === false" class="col-6 mt-3 mb-4">
                 <button @click="showForm=true" type="button" class="btn btn-primary">Yes</button>
-            </div>  
+            </div>
             <div v-show="showForm === false" class="col-6 mt-3 mb-4">
                 <router-link to="/hub"><button type="button" class="btn btn-danger">No</button></router-link>
             </div>
@@ -23,20 +23,20 @@
     </div>
 </template>
 <script>
-import AccountForm from './AccountForm.vue';
+import AccountForm from './AccountForm.vue'
 export default {
-    name:'accountCreation',
-    components: {
-        AccountForm
-    },
-    data(){
-        return{
-            showForm: false,
-        }   
-    },
-    methods:{
-
+  name: 'accountCreation',
+  components: {
+    AccountForm
+  },
+  data () {
+    return {
+      showForm: false
     }
+  },
+  methods: {
+
+  }
 }
 </script>
 <style lang="scss">

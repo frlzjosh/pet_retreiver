@@ -33,34 +33,34 @@
     </div>
 </template>
 <script>
-import {mapActions} from 'vuex';
+import { mapActions } from 'vuex'
 export default {
-    name: 'AccountForm',
-    data(){
-        return{
-            userObject: {
-                name: null,
-                city: null,
-                has_pet: null,
-                pet_type: null,
-                pet_name: null,
-                has_collar: null
-            }
+  name: 'AccountForm',
+  data () {
+    return {
+      userObject: {
+        name: null,
+        city: null,
+        has_pet: null,
+        pet_type: null,
+        pet_name: null,
+        has_collar: null
+      }
 
-        }
-    },
-    mounted(){
-    },
-    methods: {
-        ...mapActions(
-            [
-                'mutateUserInfo'
-            ]
-        ),
-        sendUserObjectToState(){
-            this.mutateUserInfo(this.userObject)
-        }
     }
+  },
+  mounted () {
+  },
+  methods: {
+    ...mapActions(
+      [
+        'mutateUserInfo'
+      ]
+    ),
+    sendUserObjectToState () {
+      this.mutateUserInfo(this.userObject)
+    }
+  }
 }
 </script>
 <style lang="scss">

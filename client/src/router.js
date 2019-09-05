@@ -8,7 +8,6 @@ import Pets from './views/Pets'
 import Profile from './views/Profile'
 import PetProfile from './views/PetProfile'
 import AccountCreation from './views/AccountCreation'
-import AccountForm from './views/AccountForm'
 
 Vue.use(Router)
 
@@ -16,13 +15,13 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-    {path: '/', component: Login},
-    {path: '/hub', component: Hub},
-    {path: '/personalMessage', component: PersonalMessage},
-    {path: '/messages', component: Messages},
-    {path: '/profile', component: Profile},
-    {path: '/pets', component: Pets},
-    {path: '/createAccount', component: AccountCreation},
-    {path: '/petProfile',component: PetProfile}
+    { path: '/', component: Login },
+    { path: '/hub', component: Hub },
+    { path: '/personalMessage', component: PersonalMessage },
+    { path: '/messages', component: Messages },
+    { path: '/profile', component: Profile },
+    { path: '/pets', component: Pets },
+    { path: '/createAccount', component: AccountCreation },
+    { path: '/petProfile', component: PetProfile }
   ]
 })

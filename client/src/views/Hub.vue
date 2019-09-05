@@ -32,77 +32,77 @@
 </template>
 <script>
 import toolbar from './../components/Toolbar'
-import { mapGetters} from 'vuex'
+import { mapGetters } from 'vuex'
 export default {
-    name: 'Hub',
-    components: {
-        toolbar
-    },
-    data(){
-        return{
-            name: null,
-            markers: [
-                {
-                    position: {
-                        lat:34.238154, lng:-118.529460
-                        }
-                },
-                {
-                    position: {
-                        lat:34.2460743, lng:-118.5370213
-                        }
-                },
-                {
-                    position: {
-                        lat:34.2433018, lng:-118.5155767
-                    },
+  name: 'Hub',
+  components: {
+    toolbar
+  },
+  data () {
+    return {
+      name: null,
+      markers: [
+        {
+          position: {
+            lat: 34.238154, lng: -118.529460
+          }
+        },
+        {
+          position: {
+            lat: 34.2460743, lng: -118.5370213
+          }
+        },
+        {
+          position: {
+            lat: 34.2433018, lng: -118.5155767
+          }
 
-                },
-                {
-                    position: {
-                        lat:34.2401014, lng:-118.5428577
-                    }
-                },
-                {
-                    position: {
-                        lat:34.2408014, lng:-118.5428677
-                    }
-                },
-                {
-                    position: {
-                        lat:34.2402214, lng:-118.5428627
-                    }
-                }
-            ],
-            locations: []
+        },
+        {
+          position: {
+            lat: 34.2401014, lng: -118.5428577
+          }
+        },
+        {
+          position: {
+            lat: 34.2408014, lng: -118.5428677
+          }
+        },
+        {
+          position: {
+            lat: 34.2402214, lng: -118.5428627
+          }
         }
-    },
-    async created(){
-        await this.makeRandomMarkers()
-    },
-    computed: {
-        ...mapGetters(
-            [
-                'getUserInfo'
-            ]
-        )
-    },
-    methods:{
-        async makeRandomMarkers(){
-            let i = 0
-            for(i = 0; i < 100; i++){
-                this.locations.push(
-                    {
-                        position: 
-                            {
-                                lat: 34.146849+ (Math.random() * (0.1000000 - 0.0701014)  + 0.0701014),
-                                lng:(-119.000000) + (Math.random() * (0.5428577 - 0.4228577))  + 0.4228577
-                            }
-                    }
-                )
-            }
-        }
+      ],
+      locations: []
     }
+  },
+  async created () {
+    await this.makeRandomMarkers()
+  },
+  computed: {
+    ...mapGetters(
+      [
+        'getUserInfo'
+      ]
+    )
+  },
+  methods: {
+    async makeRandomMarkers () {
+      let i = 0
+      for (i = 0; i < 100; i++) {
+        this.locations.push(
+          {
+            position:
+                            {
+                              lat: 34.146849 + (Math.random() * (0.1000000 - 0.0701014) + 0.0701014),
+                              lng: (-119.000000) + (Math.random() * (0.5428577 - 0.4228577)) + 0.4228577
+                            }
+          }
+        )
+      }
+    }
+  }
 }
 </script>
 
@@ -110,7 +110,7 @@ export default {
     .hub{
         padding-top: 3.25rem;
         margin-top: 1.5rem;
-        position: relative; 
+        position: relative;
     }
 
-</style>    
+</style>

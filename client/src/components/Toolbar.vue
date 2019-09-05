@@ -21,22 +21,22 @@
             <pets/>
         </div>
     </div>
-</template> 
+</template>
 <script>
 import Pets from './../views/Pets'
 export default {
-    name: 'Toolbar',
-    components:{
-        Pets
-    },
-    data(){
-        return{
-            showPets: false
-        }
-    },
-    methods: {
-
+  name: 'Toolbar',
+  components: {
+    Pets
+  },
+  data () {
+    return {
+      showPets: false
     }
+  },
+  methods: {
+
+  }
 }
 </script>
 <style lang="scss">

@@ -14,27 +14,27 @@
         <router-link to="/createAccount"><h3>Create Account</h3></router-link>
         <h3>Forgot Password</h3>
     </div>
-</div>    
+</div>
 </template>
 <script>
 import { mapActions } from 'vuex'
 export default {
-    name:'login',
-    data(){
-        return{
-            userName: null
-        }
-    },
-    methods: {
-        ...mapActions(
-            [
-                'setUserName'
-            ]
-        ),
-        mutateUserObject(){
-            this.setUserName(this.userName)
-        }
+  name: 'login',
+  data () {
+    return {
+      userName: null
     }
+  },
+  methods: {
+    ...mapActions(
+      [
+        'setUserName'
+      ]
+    ),
+    mutateUserObject () {
+      this.setUserName(this.userName)
+    }
+  }
 }
 </script>
 

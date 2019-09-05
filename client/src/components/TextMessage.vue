@@ -13,19 +13,19 @@
 
 <script>
 export default {
-    name:'TextMessage',
-    props: [
-        'message',
-        'left'
-    ],
-    data(){
-        return{
-
-        }
-    },
-    methods: {
+  name: 'TextMessage',
+  props: [
+    'message',
+    'left'
+  ],
+  data () {
+    return {
 
     }
+  },
+  methods: {
+
+  }
 }
 </script>
 
