@@ -6,7 +6,7 @@
                 <h2>Hello {{getUserInfo.name}}!</h2>
                 <p>Don't worry, {{getUserInfo.pet_name}} will be found.</p>
                 <div id="reportFound">
-                    <router-link to="/petForm" foundForm=true><p>Report a pet</p></router-link>
+                    <router-link to="/petForm" foundForm=true><button class="btn btn-primary">Report a pet</button></router-link>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
                 >
                 <GmapMarker
                     :key="index"
-                    v-for="(m, index) in markers"
+                    v-for="(m, index) in locations"
                     :position="m.position"
                     :clickable="true"
                     :draggable="true"
@@ -79,8 +79,12 @@ export default {
                         lat:34.2402214, lng:-118.5428627
                     }
                 }
-            ]
+            ],
+            locations: []
         }
+    },
+    async created(){
+        await this.makeRandomMarkers()
     },
     computed: {
         ...mapGetters(
@@ -92,6 +96,20 @@ export default {
     methods:{
         DisplayReport() {
             var reportButton = document.getElementById("")
+        },
+        async makeRandomMarkers(){
+            let i = 0
+            for(i = 0; i < 100; i++){
+                this.locations.push(
+                    {
+                        position: 
+                            {
+                                lat: 34.146849+ (Math.random() * (0.1000000 - 0.0701014)  + 0.0701014),
+                                lng:(-119.000000) + (Math.random() * (0.5428577 - 0.4228577))  + 0.4228577
+                            }
+                    }
+                )
+            }
         }
     }
 }
@@ -104,4 +122,4 @@ export default {
         position: relative; 
     }
 
-</style>
+</style>    

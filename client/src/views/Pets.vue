@@ -1,17 +1,15 @@
 
 
 <template>
-    <div class="pets container">
-        <router-link to="/hub"><p>Go Back</p></router-link>
-        <p>Pets Nearby</p>
+    <div class="pets mt-5 pb-5 container">
+        <h3>Pets Nearby</h3>
             <li class="petProfileList">
-                <pet-list></pet-list>
-                <pet-list></pet-list>
                 <pet-list></pet-list>
             </li>
     </div>
 </template>
 <script>
+import {mapGetters } from 'vuex'
 import PetList from './../components/PetList'
 export default {
     name:'Pets',
@@ -40,6 +38,16 @@ export default {
             ]
                 
         }
+    },
+    computed: {
+        ...mapGetters(
+            [
+                'getPetImages',
+                'getPetNames'
+            ]
+        )
+    },
+    mounted(){
     },
     methods: {
 
