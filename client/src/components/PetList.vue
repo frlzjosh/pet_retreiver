@@ -15,7 +15,7 @@
                 <span class="pet-info">
                     <p class="petName">Pet name: {{random_names[index]}}</p>
                     <p>Last Seen: {{locations[index]}} </p>
-                    <p>Miles away:</p>
+                    <p>Miles away: {{miles[index]}}</p>
                 </span>
             </div>
             <div class="col-3"> 
@@ -40,9 +40,13 @@ export default {
         return{
             random_names: ['Mike', 'Alex','Dane'],
             status_array: ['Lost', 'Lost', 'Found'],
-            locations: ['Winnetka, CA', 'Westwood, CA', 'North Hollywood, CA']
+            locations: ['Winnetka, CA', 'Westwood, CA', 'North Hollywood, CA'],
+            miles: []
         }
 
+    },
+    created(){
+        this.generateRandomMiles()
     },
     computed:{
         ...mapGetters(
@@ -53,7 +57,11 @@ export default {
         )
     },
     methods: {
-        
+        generateRandomMiles(){
+            for(var i =0; i < 3; i++){
+                this.miles.push(Math.floor(Math.random() * 10))
+            }
+        }
     }
 }
 </script>

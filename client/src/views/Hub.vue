@@ -100,11 +100,7 @@ export default {
                             }
                     }
                 )
-            console.log( 34.146849+ (Math.random() * (0.1200000 - 0.0701014)  + 0.0701014))
-            // console.log((-119.010770) + (Math.random() * (0.4828577 - 0.4228577))  + 0.4228577)
-            let val = Math.random() * (118.5428577 - 118.0428577 +1)  + 18.0428577
             }
-            console.log(this.locations)
         }
     }
 }

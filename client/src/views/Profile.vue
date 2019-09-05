@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <router-link to="/hub"><p>Go Back To Hub</p></router-link>
-                <photos :isForMessage="false" :photo="img_url"></photos>
+                <photos :isForPetProfile="true" :photo="img_url"></photos>
             </div>
         </div>
         <div class="row mt-3">
@@ -19,6 +19,7 @@
             </div>
         </div>
         <div class="row mt-5">
+            <h3>{{getUserInfo.name}}'s history on Pet Retriever</h3>
             <pet-list></pet-list>
         </div>
     </div>
@@ -28,11 +29,13 @@
 import { mapGetters } from 'vuex'
 import Photos from './../components/Photos'
 import MessageList from './../components/MessageList'
+import PetList from './../components/PetList'
 export default {
     name:'Profile',
     components: {
         Photos,
-        MessageList
+        MessageList,
+        PetList
     },
     data(){
         return{
