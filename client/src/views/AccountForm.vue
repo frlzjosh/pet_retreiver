@@ -65,7 +65,6 @@ export default {
 </script>
 <style lang="scss">
     .account-form{
-        padding-top: 4rem;
         margin-top: 1.5rem;
     }
 </style>
