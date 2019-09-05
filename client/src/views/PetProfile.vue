@@ -2,10 +2,8 @@
     <div class="profile container">
         <div class="row">
             <div class="col-12">
-                <router-link to="/pets"><p>Go Back To Nearby Pets</p></router-link>
-                <!-- <photos :isForMessage="false" :photo="img_url"></photos> -->
-                <photos :photo="img_doggo"></photos>
-
+                <router-link to="/hub"><p>Go Back To Nearby Pets</p></router-link>
+                <photos :isForPetProfile="true" :photo="img_doggo"></photos>
             </div>
         </div>
         <div class="row mt-3">
@@ -13,16 +11,13 @@
                 <h3>{{petName}}</h3>
                 <div class="profile__pet-info">
                     <ul class="profile__pet-list">
-                        <!-- <li class="profile__info profile__info--top">Pet Name: Thomas</li> -->
-                        <li class="pet__info">Pet Type: {{petType}}</li>
-                        <li class="profile__info">Lives In: Canoga Park, CA</li>
-                        <li class="profile__info">Owner:{{name}}</li>
+                        <li class="profile__info profile__info--top">Pet Name: Thomas</li>
+                        <li class="profile__info pet__info">Pet Type: {{petType}}</li>
+                        <li class="profile__info pet__info">Lives In: Canoga Park, CA</li>
+                        <li class="profile__info pet__info">Owner:{{name}}</li>
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="row mt-5">
-            <pet-list></pet-list>
         </div>
     </div>
 </template>
@@ -30,11 +25,13 @@
 <script>
 import Photos from './../components/Photos'
 import MessageList from './../components/MessageList'
+import PetList from './../components/PetList'
 export default {
     name:'PetProfile',
     components: {
         Photos,
-        MessageList
+        MessageList,
+        PetList
     },
     data(){
         return{
@@ -43,7 +40,8 @@ export default {
             name: "Josh",
             petName: "Thomas",
             petType: "Dog",
-            test: null
+            test: null,
+            status_array: ['lost', 'lost', 'found']
         }
     },
     methods: {
@@ -59,6 +57,7 @@ export default {
         &__info{
             &--top{
                 padding-top: 5px;
+                font-size: 1.4rem;
             }
             padding-bottom: 3px;
         }
@@ -79,7 +78,6 @@ export default {
     }
     .pet{
         &__info{
-            text-align: center;
             padding-top:10px;
         }
     }

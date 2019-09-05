@@ -1,9 +1,9 @@
 <template>
     <div class="toolbar container">
         <div class="row">
-            <div class="col-4 toolbar__item">
-                <p @click="showPets=true" class="toolbar__title">PETS</p>
-                <p v-show="showPets==true" @click="showPets=false">Hide Pets</p>
+            <div @click="showPets=!showPets" class="col-4 toolbar__item">
+                <p v-if="showPets===false" class="toolbar__title">PETS</p>
+                <p class="toolbar__title" v-show="showPets==true" @click="showPets=false">Hide Pets</p>
                 <font-awesome-icon icon="dog" size="lg"/>
 
             </div>
@@ -47,6 +47,7 @@ export default {
             width: 100px;
             border: 3px solid white;
             color: white;
+            cursor: pointer;
         }
         &__title{
             padding-top: 20px;

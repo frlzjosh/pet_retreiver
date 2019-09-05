@@ -10,6 +10,7 @@ import 'vue-material/dist/theme/default.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret, faEnvelope, faDog, faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import axios from 'axios'
 
 library.add(faUserSecret)
 library.add(faEnvelope)
@@ -21,6 +22,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(MdButton)
 Vue.use(MdContent)
 Vue.use(MdTabs)
+Vue.use(axios)
 
 let api_key ='AIzaSyD75yziFepXfsT_zyNAuaAPSxUNVLlYK-w'
 
