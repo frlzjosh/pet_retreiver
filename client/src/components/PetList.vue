@@ -21,7 +21,7 @@
             <div class="col-3"> 
                 <span class="messageButton">
                     <router-link to="/petProfile">
-                        <Button>View</Button>
+                        <button class="btn btn-primary">View</button>
                     </router-link>
                 </span>
             </div>

@@ -4,7 +4,10 @@
         <div class="row">
             <div class="col-12 hub__header">
                 <h2>Hello {{getUserInfo.name}}!</h2>
-                <p v-if="getUserInfo.pet_name">Don't worry, {{getUserInfo.pet_name}} will be found.</p>
+                <p>Don't worry, {{getUserInfo.pet_name}} will be found.</p>
+                <div id="reportFound">
+                    <router-link to="/petForm" foundForm=true><button class="btn btn-primary">Report a pet</button></router-link>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -33,14 +36,17 @@
 <script>
 import toolbar from './../components/Toolbar'
 import { mapGetters} from 'vuex'
+import PetForm from './../views/PetForm'
 export default {
     name: 'Hub',
     components: {
-        toolbar
+        toolbar,
+        PetForm
     },
     data(){
         return{
             name: null,
+            reportBool: false,
             markers: [
                 {
                     position: {
@@ -88,6 +94,9 @@ export default {
         )
     },
     methods:{
+        DisplayReport() {
+            var reportButton = document.getElementById("")
+        },
         async makeRandomMarkers(){
             let i = 0
             for(i = 0; i < 100; i++){
